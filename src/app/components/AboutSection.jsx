@@ -6,16 +6,37 @@ import TabButton from './TabButton'
 
 const TAB_DATA = [
     {
-        title: "Skills",
-        id: "skills",
+        title: "Soft Skills",
+        id: "softskills",
         content: (
             <ul className="list-disc pl-2">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>PostgreSQL</li>
-                <li>Sequelize</li>
-                <li>JavaScript</li>
-                <li>React</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+                <li>Leadership</li>
+                <li>Effective Communication</li>
+                <li>Critical Thinking</li>
+            </ul>
+        ),
+    },
+    {
+        title: "Tech Skills",
+        id: "techskills",
+        content: (
+            <ul className="list-disc pl-2">
+                <li>Networking: TCP/IP, LAN/WAN, VLAN, VPN, DNS, DHCP, CLI, Command Line, FTP, HTTP</li>
+                <li>Software & Applications: Linux CentOS, Wirehark, SQL Server, Docker, VMWare</li>
+                <li>Programming: Python, PowerShell, Java, JavaScript, SQL,XML</li>
+                <li>Hardware: Routers, Switches, Firewalls, Access Points, Servers, Storage Arrays</li>
+            </ul>
+        ),
+    },
+    {
+        title: "Languages",
+        id: "languages",
+        content: (
+            <ul className="list-disc pl-2">
+                <li>Thai: Native </li>
+                <li>English: Proficient</li>
             </ul>
         ),
     },
@@ -24,25 +45,24 @@ const TAB_DATA = [
         id: "education",
         content: (
             <ul className="list-disc pl-2">
-                <li>Fullstack Academy of Code</li>
-                <li>University of California, Santa Cruz</li>
+                <div>
+                    <div className='font-semibold text-xl'>High School Diploma</div>
+                    <p className='text-slate-400'>Chainatpittayakom School</p>
+                    <p className='text-cyan-200'>GPAX: 3.90</p>
+                </div>
+                <div>
+                    <div className='font-semibold text-xl'>Bachelor of Information Technology</div>
+                    <p className='text-slate-400'>School of Information technology King Mongkut’s University of Technology Thonburi</p>
+                    <p className='text-cyan-200'>GPAX: 3.25</p>
+                </div>
             </ul>
         ),
     },
-    {
-        title: "Certifications",
-        id: "certifications",
-        content: (
-            <ul className="list-disc pl-2">
-                <li>AWS Cloud Practitioner</li>
-                <li>Google Professional Cloud Developer</li>
-            </ul>
-        ),
-    },
+    
 ]
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills")
+    const [tab, setTab] = useState("softskills")
 
     const handleTabChange = (id) => {
         setTab(id)
@@ -69,22 +89,28 @@ const AboutSection = () => {
                     </p>
                     <div className="flex flex-row mt-8">
                         <TabButton
-                            selectTab={() => handleTabChange("skills")}
-                            active={tab === "skills"}
+                            selectTab={() => handleTabChange("softskills")}
+                            active={tab === "softskills"}
                         >
-                            Skills
+                            Soft Skills
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange("techskills")}
+                            active={tab === "techskills"}
+                        >
+                            Tech Skills
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange("languages")}
+                            active={tab === "languages"}
+                        >
+                            Languages
                         </TabButton>
                         <TabButton
                             selectTab={() => handleTabChange("education")}
                             active={tab === "education"}
                         >
                             Education
-                        </TabButton>
-                        <TabButton
-                            selectTab={() => handleTabChange("certifications")}
-                            active={tab === "certifications"}
-                        >
-                            Certifications
                         </TabButton>
                     </div>
                     <div className="mt-8">
