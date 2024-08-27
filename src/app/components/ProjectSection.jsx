@@ -10,7 +10,7 @@ const projectsData = [
     description: "Developed a Vue.js Gacha game app with dynamic animations and real-time updates, offering users an engaging and interactive experience of random item.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/SleepyLe0/PROJECT1-SEC-1-VueView",
     previewUrl: "https://vueviewgacha.netlify.app/",
   },
   {
@@ -19,8 +19,8 @@ const projectsData = [
     description: "Created a turn-based game using Vue.js, featuring strategic gameplay where players take turns making moves. The app manages game state efficiently and smooth transitions between turns, providing an interactive and immersive experience.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "",
+    gitUrl: "https://github.com/SleepyLe0/PROJECT2-SEC-1-VueView",
+    previewUrl: "/",
   },
   {
     id: 3,
