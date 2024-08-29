@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState } from 'react'
 import Image from 'next/image'
 import TabButton from './TabButton'
@@ -60,7 +59,6 @@ const TAB_DATA = [
     },
     
 ]
-
 const AboutSection = () => {
     const [tab, setTab] = useState("softskills")
 
